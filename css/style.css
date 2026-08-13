@@ -1,0 +1,63 @@
+/* Importação da Fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Transições suaves gerais */
+.transition-all {
+    transition: all 0.25s ease-in-out;
+}
+
+/* Componente Reutilizável: Input Form */
+.input-field {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: 1px solid #cbd5e1; /* slate-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    outline: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.input-field:focus {
+    border-color: #059669; /* emerald-600 */
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+/* Componente Reutilizável: Botão Principal */
+.btn-primary {
+    background-color: #059669; /* emerald-600 */
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #047857; /* emerald-700 */
+    box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Animação Suave do Alerta Urgente */
+@keyframes softPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.65; }
+}
+
+.animate-pulse {
+    animation: softPulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
